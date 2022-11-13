@@ -23,12 +23,15 @@
     },
     "routes": [
         {
-            "route": "/*",
+            "route": "/",
             "allowedRoles": ["authenticated"]
         },
         {
+            "route": "/login",
+            "rewrite": "/.auth/login/aadb2c"
+        },        
+        {
             "route": "/logout",
-            "allowedRoles": ["anonymous"],
             "redirect": "/.auth/logout"
         }
     ]
